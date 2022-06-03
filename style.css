@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+    color: white;
+    background-color: rgb(16, 17, 17);
+    font-size: 1.2rem;
+}
+
+h2 {
+    margin-top: 1em;
+    text-align: center;
+    padding: .5em;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+.display-container {
+    position: relative;
+    /* display: grid; */
+    /* justify-content: end; */
+    gap: 0.5rem;
+    padding: 1em 2em;
+    background-color: rgba(232, 255, 253, 0.05);
+    width: 18em;
+    height: 4.5em;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.temp-display {
+    position: absolute;
+    right: 2rem;
+    opacity: 0.3;
+}
+
+.result {
+    position: absolute;
+    right: 2rem;
+    top: 3.2rem;
+}
+
+.temp-result {
+    position: absolute;
+    top: 3.2rem;
+    left: 2rem;
+    opacity: 0.5;
+}
+
+.light-ash-color {
+    color: rgb(16, 17, 17);
+    background-color: rgb(226, 240, 245);
+}
+
+.dark-ash-color {
+    background-color: rgb(56, 63, 62);
+}
+
+.orange-color {
+    color: white;
+    background-color: rgb(255, 153, 0);
+}
+
+.app-div {
+    display: grid;
+    place-items: center;
+    /* border: 1px solid white; */
+    width: min(90%, 30rem);
+    grid-template-columns: repeat(4, 1fr);
+    gap: .3rem;
+    font-size: 1.04em;
+    margin-top: 1rem;
+}
+
+.app-div div {
+    display: grid;
+    place-items: center;
+    height: 4em;
+    width: 4em;
+    border-radius: 50px;
+}
+
+.app-div div:hover {
+    opacity: 0.9;
+}
+
+.app-div div:active {
+    opacity: 0.7;
+}
+
+.span-2 {
+    grid-column-start: -5;
+    grid-column-end: -3;
+    padding-right: 6.8em;
+    padding-left: 1.7em;
+}
+
+.span-3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 1.7em;
+    padding-right: 12em;
+}
+
+@media (min-width: 26em) {
+    .app-div {
+        width: 22rem;
+        gap: .6em;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 25.999em) {
+    .app-div {
+        width: 17rem;
+        gap: .5em;
+        font-size: .8em;
+    }
+    .display-container {
+        width: 14.5em;
+    }
+}
